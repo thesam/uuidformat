@@ -6,8 +6,12 @@
 
   function update() {
     var indata = document.getElementById("in");
-    console.log(indata);
     var outdata = document.getElementById("out");
-    outdata.value = indata.value;
+    outdata.value = format_uuid(indata.value);
+  }
+
+  function format_uuid(text) {
+    //TODO: Remove irrelevant characters
+    return text.substring(0,8) + "-" + text.substring(8,12) + "-" + text.substring(12,16) + "-" + text.substring(16,20) + "-" + text.substring(20,32).toLowerCase();
   }
 </script>
