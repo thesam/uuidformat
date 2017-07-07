@@ -1,0 +1,13 @@
+<input id="in" oninput="update()">
+<hr>
+<input id="out" disabled="disabled">
+<script>
+  console.log("FOO");
+
+  function update() {
+    var indata = document.getElementById("in");
+    console.log(indata);
+    var outdata = document.getElementById("out");
+    outdata.value = indata.value;
+  }
+</script>
